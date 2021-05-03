@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "tuden"
+    }
+  },
+  "defaultProject": "tuden",
+  "cli": {
+    "analytics": false
+  }
 }
