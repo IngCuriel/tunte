@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "tuden": {
+    "tuten": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/tuden",
+            "outputPath": "dist/tuten",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -63,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "tuden:build"
+            "browserTarget": "tuten:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "tuden:build:production"
+              "browserTarget": "tuten:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "tuden:build"
+            "browserTarget": "tuten:build"
           }
         },
         "test": {
@@ -112,18 +112,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "tuden:serve"
+            "devServerTarget": "tuten:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "tuden:serve:production"
+              "devServerTarget": "tuten:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "tuden",
+  "defaultProject": "tuten",
   "cli": {
     "analytics": false
   }
