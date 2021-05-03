@@ -12,12 +12,12 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## QA server Firebase
 
-`firebase login`
-`firebase init`
-`firebase deploy`
+* `firebase login`
+* `firebase init`
+* `firebase deploy`
 
-https://tuten-f2b72.web.app/
-https://tuten-f2b72.firebaseapp.com/
+- https://tuten-f2b72.web.app/
+- https://tuten-f2b72.firebaseapp.com/
 
 ## Install Angular Material
 
