@@ -3,6 +3,7 @@ import { User } from '@core/model/user';
 import { UserService } from '@core/service/user.service';
 import { ToastrService } from 'ngx-toastr';
 import { Reservacion } from '@core/model/reservacion'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-reservacion',
@@ -22,9 +23,13 @@ export class ReservacionComponent implements OnInit {
   banderaBuscando :boolean = false;
 
   constructor(private userService:UserService,
-              private toastrService:ToastrService) { }
+              private toastrService:ToastrService,
+              private router:Router) { }
 
   ngOnInit(): void {
+    if(!localStorage.getItem('token')) {
+      this.router.navigate(['/login'])
+    }
     this.getResevacion();
   }
    getResevacion = async () => {
@@ -68,7 +73,7 @@ export class ReservacionComponent implements OnInit {
            }
        }
      } catch (e) {
-      this.toastrService.warning(e.error,'Error')
+      this.toastrService.warning('Necesita iniciar sesión','Error')
      } finally {
         this.banderaBuscando = false;
      }
@@ -78,5 +83,10 @@ export class ReservacionComponent implements OnInit {
      this.selectOrdenar = null;
      this.value = '';
      this.getResevacion();
+   }
+
+   salir = ()=> {
+     localStorage.removeItem('token')
+     this.router.navigate(['/login'])
    }
 }
