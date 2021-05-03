@@ -13,6 +13,7 @@ import { HeaderComponent } from './components/shared/header/header.component';
 import { LoginComponent } from './components/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
+import { ReservacionComponent } from './components/reservacion/reservacion.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ToastrModule } from 'ngx-toastr';
     LayoutComponent,
     FooterComponent,
     HeaderComponent,
-    LoginComponent
+    LoginComponent,
+    ReservacionComponent
   ],
   imports: [
     BrowserModule,
