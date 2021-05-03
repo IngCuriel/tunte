@@ -1,10 +1,27 @@
-# Tuden
+# Proyecto Tuden
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.4.
+Este proyecto implementa un modulo de login y mostrar una lista de elementos en un datagrid
+
+## Stack
+
+* [Angular CLI](https://github.com/angular/angular-cli) version 9.1.4.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## QA server Firebase
+
+`firebase login`
+`firebase init`
+`firebase deploy`
+
+https://tuten-f2b72.web.app/
+https://tuten-f2b72.firebaseapp.com/
+
+## Install Angular Material
+
+`ng add @angular/material`
 
 ## Code scaffolding
 
