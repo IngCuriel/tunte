@@ -14,6 +14,7 @@ import { LoginComponent } from './components/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { ReservacionComponent } from './components/reservacion/reservacion.component';
+import { FormsModule }   from '@angular/forms';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { ReservacionComponent } from './components/reservacion/reservacion.compo
     MaterialModule,
     HttpClientModule,
     ReactiveFormsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    FormsModule
    ],
   providers: [],
   bootstrap: [AppComponent]
