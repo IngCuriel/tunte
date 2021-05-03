@@ -1,3 +1,35 @@
+<!--Filtros-->
+<div style="padding: 2px;"> 
+  <mat-form-field style="margin: 2px;">
+    <mat-label>Filtrar por </mat-label>
+    <mat-select [(value)]="selectTipoFiltros">
+      <mat-option value="bookingId">BookingId</mat-option>
+      <mat-option value="bookingPrice">Precio</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Ingresa cantidad</mat-label>
+    <input matInput type="text" [(ngModel)]="value">
+  </mat-form-field>
+  <mat-form-field  style="margin: 2px;">
+    <mat-label>Filtro </mat-label>
+    <mat-select [(value)]="selectOrdenar">
+      <mat-option value=">=">>=</mat-option>
+      <mat-option value="<="><=</mat-option>
+    </mat-select>
+  </mat-form-field>
+    <button  style="margin: 2px;" mat-stroked-button color="primary" (click) ="getResevacion()"> {{(!banderaBuscando) ? 'Buscar' : ''}}
+      <mat-icon *ngIf="!banderaBuscando" matSuffix>search</mat-icon>
+      <mat-spinner *ngIf="banderaBuscando" diameter="20" matSuffix ></mat-spinner>
+    </button>
+    <button  style="margin: 2px;" mat-stroked-button color="primary" (click) ="limpiar()">   
+      Limpiar filtros
+    </button>
+</div>
+<!--End Filtro-->
+
+
+
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
     <ng-container matColumnDef="bookingId" sticky>
