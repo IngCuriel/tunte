@@ -3,6 +3,8 @@ import { User } from '@core/model/user';
 import { UserService } from '@core/service/user.service';
 import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
+
 
 
  @Component({
@@ -17,7 +19,8 @@ export class LoginComponent implements OnInit {
 
   constructor(private userService:UserService,
               private formBuilder: FormBuilder,
-              private toastrService:ToastrService) {
+              private toastrService:ToastrService,
+              private router:Router) {
                }
 
   ngOnInit(): void {
@@ -33,8 +36,8 @@ export class LoginComponent implements OnInit {
       try {
         const responseLogin = await this.userService.login(this.user).toPromise();
         console.log('responseLogin', responseLogin);
-        this.toastrService.success('Logiado correctamente');
-
+        localStorage.setItem('token', responseLogin.sessionTokenBck);
+        this.router.navigate(['/reservacion'])
       } catch (e) {
          this.toastrService.warning(e.error, 'Login error');
       }
